@@ -19,7 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Welcome" />
+        <activity android:name=".Register" />
+        <activity android:name=".Dashboard" />
+        <activity android:name=".Admin"/>
     </application>
 
 </manifest>
