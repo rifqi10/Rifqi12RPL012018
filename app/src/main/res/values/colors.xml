@@ -5,4 +5,6 @@
     <color name="colorAccent">#8CEE1D</color>
     <color name="bgregister">#2E8BDD</color>
     <color name="oioi">#FFFFFF</color>
+    <color name="year">#999999</color>
+    <color name="title">#222222</color>
 </resources>
