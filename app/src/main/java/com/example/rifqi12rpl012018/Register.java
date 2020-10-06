@@ -69,7 +69,7 @@ public class Register extends AppCompatActivity {
                 body.put("nohp", nohp);
                 body.put("alamat", alamat);
                 body.put("role", "1");
-                AndroidNetworking.post("http://192.168.43.145/API_Rifqi/register.php")
+                AndroidNetworking.post("http://192.168.43.145/API_RIfqi/register.php")
                         .addBodyParameter(body)
 //                        .setOkHttpClient(((Initial) getApplication()).getOkHttpClient())
                         .setPriority(Priority.MEDIUM)

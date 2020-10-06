@@ -1,53 +1,84 @@
 package com.example.rifqi12rpl012018;
 
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class rv_adapter extends RecyclerView.Adapter<rv_adapter.MyViewHolder> {
+public class rv_adapter extends RecyclerView.Adapter<rv_adapter.ScansDataViewHolder> {
+    private ArrayList<rv_model> mList;
+    private Context mCtx;
 
-    private List<rv_model> moviesList;
+    public rv_adapter(Context ctx, ArrayList<rv_model> mList) {
+        this.mCtx = ctx;
+        this.mList = mList;
+    }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView nama, email, id;
+    @NonNull
+    @Override
+    public ScansDataViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_rv, viewGroup,false);
+        return new ScansDataViewHolder(view);
+    }
 
-        public MyViewHolder(View view) {
-            super(view);
-            nama = (TextView) view.findViewById(R.id.nama);
-            email = (TextView) view.findViewById(R.id.email);
-            id = (TextView) view.findViewById(R.id.id);
+    @Override
+    public void onBindViewHolder(@NonNull ScansDataViewHolder accountsScansDataViewHolder, int position) {
+        final rv_model aModel = mList.get(position);
+
+        accountsScansDataViewHolder.tvNama.setText(aModel.getNama());
+        accountsScansDataViewHolder.tvKode.setText(aModel.getId());
+        accountsScansDataViewHolder.tvJenis.setText(aModel.getEmail());
+    }
+    @Override
+    public int getItemCount() {
+        return mList.size();
+    }
+
+    public void clearData() {
+        int size = this.mList.size();
+        if (size > 0) {
+            for (int i = 0; i < size; i++) {
+                this.mList.remove(0);
+            }
         }
     }
 
 
-    public rv_adapter(Context applicationContext, List<rv_model> moviesList) {
-        this.moviesList = moviesList;
+    public class ScansDataViewHolder extends RecyclerView.ViewHolder {
+        CardView cvItem;
+        TextView tvNama,tvJenis, tvKode;
+        private EditText nama,jenis,text;
+
+
+
+        public ScansDataViewHolder(@NonNull View itemView) {
+            super(itemView);
+            tvNama = (TextView) itemView.findViewById(R.id.tvNama);
+            tvJenis = (TextView) itemView.findViewById(R.id.tvJenis);
+            tvKode = (TextView) itemView.findViewById(R.id.tvKode);
+            cvItem = (CardView) itemView.findViewById(R.id.cvItem);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(mCtx, User.class);
+                    i.putExtra("EXTRA_CUSTOMER", mList.get(getAdapterPosition()));
+                    mCtx.startActivity(i);
+                }
+            });
+        }
     }
 
-    @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.activity_admin, parent, false);
-
-        return new MyViewHolder(itemView);
-    }
-
-    @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
-        rv_model movie = moviesList.get(position);
-        holder.nama.setText(movie.getNama());
-        holder.email.setText(movie.getEmail());
-        holder.id.setText(movie.getId());
-    }
-
-    @Override
-    public int getItemCount() {
-        return moviesList.size();
-    }
 }

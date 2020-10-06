@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 HashMap<String, String> body = new HashMap<>();
                 body.put("email", username);
                 body.put("password", password);
-                AndroidNetworking.post("http://192.168.43.145/API_Rifqi/login.php")
+                AndroidNetworking.post("http://192.168.43.145/API_RIfqi/login.php")
                         .addBodyParameter(body)
 //                        .setOkHttpClient(((Initial) getApplication()).getOkHttpClient())
                         .setPriority(Priority.MEDIUM)
