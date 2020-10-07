@@ -64,7 +64,7 @@
                 android:layout_marginRight="30dp"
                 android:drawablePadding="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:hint="Nomor Hp"
+                android:hint="Nomor Ktp"
                 android:inputType="number"
                 android:textColorHint="#000000"
                 android:textSize="12dp" />

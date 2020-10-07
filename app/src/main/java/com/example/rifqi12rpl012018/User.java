@@ -96,7 +96,7 @@ public class User extends AppCompatActivity {
 
     private void getData() {
         String id = getIntent().getStringExtra("u_id");
-        AndroidNetworking.post("http://192.168.43.145/API_RIfqi/edit_user.php")
+        AndroidNetworking.post("http://192.168.43.213/API_RIfqi/edit_user.php")
                 .addBodyParameter("id", id)
                 .setTag("test")
                 .setPriority(Priority.MEDIUM)
@@ -150,7 +150,7 @@ public class User extends AppCompatActivity {
         body.put("nohp", nohp);
         body.put("alamat", alamat);
 
-        AndroidNetworking.post("http://192.168.43.145/API_RIfqi/edit_user.php")
+        AndroidNetworking.post("http://192.168.43.213/API_RIfqi/edit_user.php")
                 .addBodyParameter(body)
                 .setPriority(Priority.MEDIUM)
                 .build()
@@ -224,7 +224,7 @@ public class User extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("pref", MODE_PRIVATE);
         String id_auth = sharedPreferences.getString("id", "");
 //            String id = getIntent().getStringExtra("u_id");
-        AndroidNetworking.post("http://192.168.43.145/API_RIfqi/delete_user.php")
+        AndroidNetworking.post("http://192.168.43.213/API_RIfqi/delete_user.php")
                 .addBodyParameter("id", id)
 //                    .addBodyParameter("id_auth", id_auth)
                 .setTag("test")
