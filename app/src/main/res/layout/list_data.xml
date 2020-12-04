@@ -5,12 +5,12 @@
     android:id="@+id/cvItem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="5dp"
-    android:layout_margin="5dp"
+    android:layout_marginBottom="10dp"
+    android:layout_margin="10dp"
     android:foreground="?android:attr/selectableItemBackground"
     android:orientation="horizontal"
-    card_view:cardCornerRadius="10dp"
-    card_view:cardElevation="10dp">
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
         android:background="#fff">
 
         <View
-            android:layout_width="2dp"
+            android:layout_width="10dp"
             android:layout_height="match_parent"
             android:layout_gravity="left"
             android:layout_marginTop="0sp"
@@ -31,9 +31,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="#fff"
-            android:paddingLeft="2dp"
+            android:paddingLeft="5dp"
             android:paddingTop="3dp"
-            android:paddingBottom="5dp">
+            android:paddingBottom="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -62,41 +62,40 @@
                         android:id="@+id/tvKode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
-                        android:text="1"
+                        android:layout_marginRight="5dp"
                         android:textColor="#131313"
-                        android:textSize="17dp"
+                        android:textSize="10dp"
                         android:textStyle="bold"
-                        android:paddingLeft="2dp"/>
+                        android:paddingLeft="10dp"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="3dp"
-                        android:paddingBottom="1dp"
+                        android:paddingLeft="5dp"
+                        android:paddingBottom="3dp"
                         android:textSize="10dp"
                         android:textColor="#363636"
-                        android:text="ID"
                         android:id="@+id/tvSession"/>
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
                     android:gravity="center_horizontal"
                     android:orientation="vertical"
-                    android:layout_marginLeft="3dp"
-                    android:paddingLeft="2dp"
-                    android:paddingRight="2dp">
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:paddingTop="2dp"
+                        android:paddingTop="5dp"
                         android:text="NAMA"
                         android:textColor="#AAAAAA"
-                        android:textSize="15dp"
+                        android:textSize="10dp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -105,9 +104,8 @@
                         android:layout_height="match_parent"
                         android:gravity="top"
                         android:textAllCaps="true"
-                        android:text="INDRA"
                         android:textColor="@color/colorAccent"
-                        android:textSize="15dp"
+                        android:textSize="10dp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -124,26 +122,56 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginRight="10dp"
                         android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
                         android:text="EMAIL"
                         android:textColor="#aaaaaa"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        android:paddingTop="2dp"/>
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingLeft="5dp"
-                        android:paddingBottom="2dp"
-                        android:textSize="15dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="10dp"
                         android:textColor="#313131"
-                        android:text="indraxrpl2018rus@gmail.com"
                         android:textStyle="bold"
-                        android:id="@+id/tvJenis"/>
+                        android:id="@+id/txtemail1"/>
 
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:paddingLeft="5dp"
+                        android:text="NO HP"
+                        android:textColor="#aaaaaa"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+                        android:paddingTop="5dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="10dp"
+                        android:textColor="#313131"
+                        android:textStyle="bold"
+                        android:id="@+id/txtnohp"/>
+
+                </LinearLayout>
+
 
             </LinearLayout>
         </LinearLayout>

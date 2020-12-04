@@ -13,7 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".User"></activity>
+        <activity android:name=".TambahSepeda"></activity>
+        <activity android:name=".Sepeda" />
+        <activity android:name=".EditSepeda" />
+        <activity android:name=".User" />
         <activity android:name=".Register" />
         <activity android:name=".Admin" />
         <activity android:name=".MainActivity">
